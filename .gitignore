@@ -1,0 +1,15 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+node_modules
+bower_components/*
+.DS_Store
+*.swp
+*.swo
+*.map
+*/*.min.js
+*/*.min.css
+config.codekit
+sftp-config.json
+.idea
+build
+build/*

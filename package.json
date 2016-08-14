@@ -1,0 +1,12 @@
+{
+  "name": "mathcongr",
+  "version": "0.0.1",
+  "description": "Math conferences in Greece.",
+  "author": "Kostas <i@oranger.me>",
+  "license": "GPL",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {}
+}

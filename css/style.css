@@ -1,0 +1,40 @@
+html, body {
+    background-color: #242d48;
+}
+.page-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: white;
+}
+.main-content {
+    border: 1px solid #ccc;
+    background-image: url('/images/light_toast.png');
+}
+.uni-links li {
+    height: 40px;
+    margin-bottom: 20px;
+}
+.content-tab-cnt {
+    background-color: #efefef;
+}
+.event__details {
+    color: red;
+    font-weight: bold;
+}
+.header__image {
+    height: 320px;
+    background-image: url('/images/raphael.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media (max-width: 795px) {
+    .header__image {
+        height: 250px;
+    }
+}
+@media (max-width: 620px) {
+    .header__image {
+        height: 150px;
+    }
+}
