@@ -14,7 +14,7 @@ html, body {
 }
 
 .page-title {
-    font-family: Georgia;
+    text-shadow: 1px 2px 0px #ccc;
     margin: 0 auto 10px;
 }
 
