@@ -6,6 +6,21 @@ html, body {
     margin: 0 auto;
     background-color: white;
 }
+
+.page-header {
+    margin-top: 15px;
+    // border-bottom: 1px solid #eee;
+    border: none;
+}
+
+.page-title {
+    margin: 0 auto 10px;
+}
+
+.header-line {
+    border-top: 1px solid #ccc;
+}
+
 .main-content {
     border: 1px solid #ccc;
     background-image: url('/images/light_toast.png');
@@ -22,7 +37,7 @@ html, body {
     font-weight: bold;
 }
 .header__image {
-    height: 320px;
+    height: 280px;
     background-image: url('/images/raphael.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
