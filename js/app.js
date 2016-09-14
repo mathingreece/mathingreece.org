@@ -12,6 +12,9 @@ var loadEvents = function() {
         var startDate;
         var endDate;
         var date;
+        events.conference = _.sortBy(events.conference, function(event) {
+            return - new Date(event.meta.startDate).getTime();
+        });
         events.conference.forEach(function(event) {
             startDate = undefined;
             endDate = undefined;
@@ -37,7 +40,7 @@ var loadEvents = function() {
             };
 
             if (endDate) {
-                if (endDate > today) {
+                if (endDate >= today) {
                     upcomingEventsHtml += eventTpl(eventData);
                 } else {
                     pastEventsHtml += eventTpl(eventData);
