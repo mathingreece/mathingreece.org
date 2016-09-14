@@ -42,7 +42,7 @@ html, body {
     background-image: url('/images/raphael.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
-    border: 0px solid #eee;
+    border: 0px solid #000;
     border-top-width: 1px;
     border-bottom-width: 1px;
 }
