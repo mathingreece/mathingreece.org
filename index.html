@@ -33,24 +33,32 @@
                     <div class="row content-tab-cnt">
                         <div class="col-md-12">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#">Conferences</a></li>
-                                <li><a href="#">Seminars</a></li>
+                                <li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#conferences" aria-controls="conferences">Conferences</a></li>
+                                <li role="presentation"><a role="tab" data-toggle="tab" href="#seminars" aria-controls="seminars">Seminars</a></li>
                                 <!-- <li><a href="#">Research areas</a></li> -->
-                                <li><a href="#">About</a></li>
+                                <li role="presentation"><a role="tab" data-toggle="tab" href="#about" aria-controls="about">About</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div>
-                        <div class="js_events events">
-                            <h3 class="js_upcoming_events_heading">Upcoming</h3>
-                            <ul class="events__list js_events_list js_upcoming_events_list"></ul>
-                            <h3 class="js_past_events_heading">Past</h3>
-                            <ul class="events__list js_events_list js_past_events_list"></ul>
-                            <h3>Seminars</h3>
-                            <ul class="events__list js_events_list js_seminars"></ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active js_events events" id="conferences">
+                            <!-- <h3 class="js_upcoming_events_heading">Upcoming</h3> -->
+                            <div class="events__list js_events_list js_upcoming_n_recent_events_list"></div>
+                            <h3 class="js_past_events_heading"><span class="btn btn-link">Past events</span></h3>
+                            <div class="events__list js_events_list js_older_events_list hide"></div>
                         </div>
-                        <div class="js_about about hide">
-                            blah blah blah
+                        <div role="tabpanel" class="tab-pane" id="seminars">
+                            <!-- <h3>Seminars</h3> -->
+                            <div class="events__list js_events_list js_seminars"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane js_about about" id="about">
+                            In this website it is attempted to include as completely as possible the announcements for the conferences, workshops and seminars in Mathematics, pure and applied, being organized within the "boundaries" of the Hellenic Mathematical Community.
+
+                            The goal is twofold:
+                            to create a portal where the members of the Hellenic and International Mathematical Community could be informed about the research meetings taking place in Greece and Cyprus.
+                            to encourage especially the undergraduate and graduate students coming from the eight Hellenic Departments of Mathematics to participate in such events, as an initial step towards the further development of University level Mathematics in these departments.
+
+                            In this direction, it would be greatly appreciated if the organizers (or participants) of any future mathematics conferences or seminars taking place in Greece or Cyprus would send the relative announcements, as well as any comments, to the e-mail address mathingreece@gmail.com in order to keep this website up to date and further develop it.
                         </div>
                     </div>
                 </div>

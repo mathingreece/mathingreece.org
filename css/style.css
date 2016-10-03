@@ -48,6 +48,10 @@ html, body {
     border-bottom-width: 1px;
 }
 
+.year-name, .city-name {
+    font-weight: bold;
+}
+
 @media (max-width: 795px) {
     .header__image {
         height: 250px;
