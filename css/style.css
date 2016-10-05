@@ -52,6 +52,10 @@ html, body {
     font-weight: bold;
 }
 
+#about {
+    padding: 10px 60px;
+}
+
 @media (max-width: 795px) {
     .header__image {
         height: 250px;
