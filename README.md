@@ -11,12 +11,14 @@ TODO:
 
 - [x] add menu actions
 
-- [ ] improve uni images
+- [x] change links
 
-- [ ] add about text and imrpove links as in files
+- [x] add about text and imrpove links as in files
 
-- [ ] change links
+- [ ] improve uni images (need photoshop)
 
 - [ ] improve styling
 
-- [ ] add latex support
+- [ ] back to top
+
+- [ ] add latex support (https://github.com/robert-chiniquy/meta-kramed) (https://github.com/cben/mathdown/wiki/math-in-markdown)
