@@ -10,80 +10,85 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <div class="page-container container-fluid">
-        <header class="page-header">
-            <h1 class="text-center page-title">Mathematics talks in Greece</h1>
-            <div class="text-center">
-                <p>A website aiming to present the wide scope of the mathematics talks being given in Greece.</p>
-            </div>
-            <!-- <hr class="header-line"> -->
-            <div class="row text-center header__image"></div>
-        </header>
-        <main class="page-main">
-            <div class="row">
-                <div class="hidden-xs col-sm-2 col-md-2">
-                    <ul class="list-unstyled uni-links">
-                        <li><a href="http://noether.math.uoa.gr/" target="_blank" title=""><img class="img-responsive" src="/images/uoa.png" alt="Athens"></a></li>
-                        <li><a href="http://www.math.auth.gr/" target="_blank" title=""><img class="img-responsive" src="/images/auth.png" alt="Thessaloniki"></a></li>
-                        <li><a href="http://www.math.uoc.gr/el/index.php" target="_blank" title=""><img class="img-responsive" src="/images/uoc.png" alt="Crete"></a></li>
-                        <li><a href="http://www.math.upatras.gr/" target="_blank" title=""><img class="img-responsive" src="/images/upatras.png" alt="Patras"></a></li>
-                    </ul>
+    <div class="page-container">
+        <div class="container-fluid">
+            <header class="page-header">
+                <h1 class="text-center page-title">Mathematics talks in Greece</h1>
+                <div class="text-center">
+                    <p>A website aiming to present the wide scope of the mathematics talks being given in Greece.</p>
                 </div>
-                <div class="col-xs-12 col-sm-8 col-md-8 main-content container-fluid">
-                    <div class="row content-tab-cnt">
-                        <div class="col-md-12">
-                            <ul class="nav nav-tabs">
-                                <li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#conferences" aria-controls="conferences">Conferences</a></li>
-                                <li role="presentation"><a role="tab" data-toggle="tab" href="#seminars" aria-controls="seminars">Seminars</a></li>
-                                <!-- <li><a href="#">Research areas</a></li> -->
-                                <li role="presentation"><a role="tab" data-toggle="tab" href="#about" aria-controls="about">About</a></li>
-                            </ul>
+                <!-- <hr class="header-line"> -->
+                <div class="row text-center header__image"></div>
+            </header>
+            <main class="page-main">
+                <div class="row">
+                    <div class="hidden-xs col-sm-2 col-md-2">
+                        <ul class="list-unstyled uni-links">
+                            <li><a href="http://noether.math.uoa.gr/" target="_blank" title=""><img class="img-responsive" src="/images/uoa.png" alt="Athens"></a></li>
+                            <li><a href="http://www.math.auth.gr/" target="_blank" title=""><img class="img-responsive" src="/images/auth.png" alt="Thessaloniki"></a></li>
+                            <li><a href="http://www.math.uoc.gr/el/index.php" target="_blank" title=""><img class="img-responsive" src="/images/uoc.png" alt="Crete"></a></li>
+                            <li><a href="http://www.math.upatras.gr/" target="_blank" title=""><img class="img-responsive" src="/images/upatras.png" alt="Patras"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 main-content container-fluid">
+                        <div class="row content-tab-cnt">
+                            <div class="col-md-12">
+                                <ul class="nav nav-tabs">
+                                    <li role="presentation" class="active"><a role="tab" data-toggle="tab" href="#conferences" aria-controls="conferences">Conferences</a></li>
+                                    <li role="presentation"><a role="tab" data-toggle="tab" href="#seminars" aria-controls="seminars">Seminars</a></li>
+                                    <!-- <li><a href="#">Research areas</a></li> -->
+                                    <li role="presentation"><a role="tab" data-toggle="tab" href="#about" aria-controls="about">About</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active js_events events" id="conferences">
+                                <h3 class="js_upcoming_events_heading">Upcoming</h3>
+                                <div class="js_upcoming_events_list"></div>
+                                <h3 class="js_past_events_heading">Past</h3>
+                                <div class="js_past_events_list"></div>
+                                <!-- <div class="events__list js_events_list js_upcoming_n_recent_events_list"></div> -->
+                                <h3 class="js_older_events_heading"><span class="btn btn-link">Older events</span></h3>
+                                <div class="events__list js_events_list js_older_events_list hide"></div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="seminars">
+                                <!-- <h3>Seminars</h3> -->
+                                <div class="events__list js_events_list js_seminars"></div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane js_about about" id="about">
+                                <p>In this website it is attempted to include as completely as possible announcements for conferences, workshops and seminars in Mathematics, pure and applied, being organized within the "boundaries" of the Hellenic Mathematical Community.</p>
+
+                                <p>The goal is twofold:
+                                <ul>
+                                <li>to create a portal where the members of the Hellenic and International Mathematical Community could be informed about the research meetings taking place in Greece and Cyprus.</li>
+                                <li>to encourage especially the undergraduate and graduate students coming from the eight Hellenic Departments of Mathematics to participate in such events, as an initial step towards the further development of University level Mathematics in these departments.</li>
+                                </ul></p>
+
+                                <p>In this direction, it would be greatly appreciated if the organizers (or participants) of any future mathematics conferences or seminars taking place in Greece or Cyprus would send the relative announcements, as well as any comments, to the e-mail address <a href="mailto:mathingreece@gmail.com">mathingreece@gmail.com</a> in order to keep this website up to date and further develop it.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active js_events events" id="conferences">
-                            <!-- <h3 class="js_upcoming_events_heading">Upcoming</h3> -->
-                            <div class="events__list js_events_list js_upcoming_n_recent_events_list"></div>
-                            <h3 class="js_past_events_heading"><span class="btn btn-link">Older events</span></h3>
-                            <div class="events__list js_events_list js_older_events_list hide"></div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="seminars">
-                            <!-- <h3>Seminars</h3> -->
-                            <div class="events__list js_events_list js_seminars"></div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane js_about about" id="about">
-                            <p>In this website it is attempted to include as completely as possible announcements for conferences, workshops and seminars in Mathematics, pure and applied, being organized within the "boundaries" of the Hellenic Mathematical Community.</p>
-
-                            <p>The goal is twofold:
-                            <ul>
-                            <li>to create a portal where the members of the Hellenic and International Mathematical Community could be informed about the research meetings taking place in Greece and Cyprus.</li>
-                            <li>to encourage especially the undergraduate and graduate students coming from the eight Hellenic Departments of Mathematics to participate in such events, as an initial step towards the further development of University level Mathematics in these departments.</li>
-                            </ul></p>
-
-                            <p>In this direction, it would be greatly appreciated if the organizers (or participants) of any future mathematics conferences or seminars taking place in Greece or Cyprus would send the relative announcements, as well as any comments, to the e-mail address <a href="mailto:mathingreece@gmail.com">mathingreece@gmail.com</a> in order to keep this website up to date and further develop it.</p>
-                        </div>
+                    <div class="hidden-xs col-sm-2 col-md-2">
+                        <ul class="list-unstyled uni-links">
+                            <li><a href="http://www.semfe.ntua.gr/el/" target="_blank" title=""><img class="img-responsive" src="/images/ntua.png" alt="SEMFE"></a></li>
+                            <li><a href="http://www.math.uoi.gr/" target="_blank" title=""><img class="img-responsive" src="/images/uoi.png" alt="Ioannina"></a></li>
+                            <li><a href="http://www.math.aegean.gr/in/" target="_blank" title=""><img class="img-responsive" src="/images/aegean.png" alt="Samos"></a></li>
+                            <li><a href="https://www.ucy.ac.cy/mas/el/" target="_blank" title=""><img class="img-responsive" src="/images/cyprus.png" alt="Nicosia"></a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="hidden-xs col-sm-2 col-md-2">
-                    <ul class="list-unstyled uni-links">
-                        <li><a href="http://www.semfe.ntua.gr/el/" target="_blank" title=""><img class="img-responsive" src="/images/ntua.png" alt="SEMFE"></a></li>
-                        <li><a href="http://www.math.uoi.gr/" target="_blank" title=""><img class="img-responsive" src="/images/uoi.png" alt="Ioannina"></a></li>
-                        <li><a href="http://www.math.aegean.gr/in/" target="_blank" title=""><img class="img-responsive" src="/images/aegean.png" alt="Samos"></a></li>
-                        <li><a href="https://www.ucy.ac.cy/mas/el/" target="_blank" title=""><img class="img-responsive" src="/images/cyprus.png" alt="Nicosia"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </main>
-        <footer class="page-footer">
+            </main>
+        </div>
+        <footer class="page-footer container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <hr/>
+                    <!-- <hr/> -->
                     <h2>Useful links</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-lg-6">
-                    <ul class="list-unstyled">
+                    <ul>
                         <li><a target="_blank" href="http://www.ams.org/mathscinet/" title="MathSciNet">MathSciNet</a></li>
                         <li><a target="_blank" href="https://arxiv.org/archive/math" title="arXiv">arXiv</a></li>
                         <li><a target="_blank" href="http://www.hms.gr" title="Hellenic Mathematical Society">Hellenic Mathematical Society</a></li>
@@ -92,7 +97,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6">
-                    <ul class="list-unstyled">
+                    <ul>
                         <li><a target="_blank" href="http://www.ams.org/home/page" title="American Mathematical Society">American Mathematical Society</a></li>
                         <li><a target="_blank" href="http://www.esi-stat.gr/" title="Greek Statistical Institute">Greek Statistical Institute</a></li>
                         <li><a target="_blank" href="http://www.iacm.forth.gr/" title="Institute for Applied and Computational Mathematics">Institute for Applied and Computational Mathematics</a></li>
@@ -106,22 +111,16 @@
                     Copyright &copy; 2016 &middot; <a href="/" title="mathcon.local">mathcon.local</a>
                 </div>
             </div>
-            <!-- <ul>
-                <li><a href="http://www.ams.org/mathscinet/" target="_blank" title="MathSciNet">MathSciNet</a></li>
-                <li><a href="https://arxiv.org/archive/math" target="_blank" title="arXiv">arXiv</a></li>
-                <li><a href="http://www.ams.org/home/page" target="_blank" title="AMS">AMS</a></li>
-                <li><a href="http://www.euro-math-soc.eu/" target="_blank" title="EMS">EMS</a></li>
-                <li><a href="http://www.esi-stat.gr/" target="_blank" title="Greek Statistical Institute">Greek Statistical Institute</a></li>
-                <li><a href="http://www.iacm.forth.gr/" target="_blank" title="Institute for Applied and Computational Mathematics">Institute for Applied and Computational Mathematics</a></li>
-                <li><a href="http://www.acmac.uoc.gr/" target="_blank" title="Archimedes Center for Modeling, Analysis and Computation">Archimedes Center for Modeling, Analysis and Computation</a></li>
-                <li><a href="http://www.hms.gr/" target="_blank" title="Hellenic Mathematical Society">Hellenic Mathematical Society</a></li>
-            </ul> -->
         </footer>
+        <div>
+            <div class="text-center scroll-to-top js_backtotop" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></span></div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" crossorigin="anonymous" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js" crossorigin="anonymous" type="text/javascript"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <!-- <li>
         <h4><a href="http://fourier.math.uoc.gr/pcma2016/" target="_blank" title="15th Panhellenic Conference of Mathematical Analysis">15th Panhellenic Conference of Mathematical Analysis</a></h4>
@@ -132,10 +131,17 @@
     <script type="text/template" id="tpl-event-item">
         <li>
             <h4><% if (link) { %><a href="<%- link %>" target="_blank" title="<%- title %>"><% } %><%- title %><% if (link) { %></a><% } %></h4>
+            <% if (subtitle) { %><div class="event__subtitle"><%= subtitle %></div><% } %>
             <% if (content) { %><p><%= content %></p><% } %>
             <% if (date) { %><div><span class="event__details">when:</span> <%- date %></div><% } %>
             <% if (place) { %><div><span class="event__details">where:</span> <%- place %></div><% } %>
         </li>
+    </script>
+    <script type="text/template" id="tpl-year">
+        <div>
+            <h4 class="year-name"><%- year %></h4>
+            <ul class="year-events"><%= events %></ul>
+        </div>
     </script>
 </body>
 </html>

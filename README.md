@@ -15,10 +15,27 @@ TODO:
 
 - [x] add about text and imrpove links as in files
 
+- [x] back to top
+
+- [x] add latex support (https://github.com/robert-chiniquy/meta-kramed) (https://github.com/cben/mathdown/wiki/math-in-markdown)
+
+- [x] include subtitle in italics
+
+- [x] domain name mathingreece.org
+
+- [x] footer 
+    background color?
+    links bullets?
+
+- [x] split conferences to 
+  - upcoming events
+  - past events
+    - older
+
 - [ ] improve uni images (need photoshop)
 
 - [ ] improve styling
 
-- [ ] back to top
+- [ ] hosting
 
-- [ ] add latex support (https://github.com/robert-chiniquy/meta-kramed) (https://github.com/cben/mathdown/wiki/math-in-markdown)
+- [ ] FIX CONFERENCE DATES

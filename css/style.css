@@ -56,6 +56,19 @@ html, body {
     padding: 10px 60px;
 }
 
+.event__subtitle { font-style: italic; }
+
+.page-footer {
+    background-color: #ddd;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 3px 10px -5px inset;
+}
+
+.scroll-to-top {
+    position: fixed; bottom: 10px; width: 30px; height: 30px; background: #EEE; text-align: center; line-height: 30px; border-radius: 3px; border: 1px solid #DDD; z-index: 999; right: 15px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); cursor: pointer;
+}
+
 @media (max-width: 795px) {
     .header__image {
         height: 250px;

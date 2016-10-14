@@ -3,10 +3,14 @@ var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
 var loadEvents = function() {
     var eventSrcTpl = $('#tpl-event-item').html();
     var eventTpl = _.template(eventSrcTpl);
+    var yearSrcTpl = $('#tpl-year').html();
+    var yearTpl = _.template(yearSrcTpl);
     var today = new Date();
     var showEventsData = function(events) {
         var olderEventsHtml = '';
-        var upcomingAndRecentEventsHtml = '';
+        // var upcomingAndRecentEventsHtml = '';
+        var upcomingEventsHtml = '';
+        var pastEventsHtml = '';
         var seminarsHtml = '';
         var eventData = {};
         var startDate;
@@ -33,9 +37,11 @@ var loadEvents = function() {
             eventData = {
                 content: event.html,
                 title: event.meta.title,
+                subtitle: event.meta.subTitle,
                 place: event.meta.location,
                 researchFields: event.meta.researchFields,
                 link: event.meta.link,
+                startDate: event.meta.startDate,
                 date: date
             };
             var existingYear = _.find(eventsByYear, {year: startDate.getFullYear()});
@@ -47,34 +53,64 @@ var loadEvents = function() {
                     events: [eventData]
                 });
             }
-            // console.log(existingYear);
-            // if (endDate) {
-            //     // If event older than 3 years from current, place it to older events
-            //     if (today.getFullYear() - endDate.getFullYear() < 3) {
-            //         upcomingAndRecentEventsHtml += eventTpl(eventData);
-            //     } else {
-            //         olderEventsHtml += eventTpl(eventData);
-            //     }
-            // }
         });
 
         eventsByYear = _.sortBy(eventsByYear, function(event) {
             return - event.year;
         });
         eventsByYear.forEach(function(year) {
-            var yearHtml = '<div class=""><h4 class="year-name">' + year.year + '</h4><ul class="year-events">'
-            year.events.forEach(function(event){
-                yearHtml += eventTpl(event);
-            });
-            yearHtml += '</ul></div>';
+            var yearUpcomingHtml = '', yearPastHtml = '', yearHtml = '';
+            var yearUpcomingEventsHtml = '',  yearPastEventsHtml = '';
+            if (year.year == today.getFullYear()) {
+                var d = new Date();
+                year.events.forEach(function(event){
+                    d = new Date(event.startDate);
+                    if (today < d) {
+                        // console.log(event);
+                        yearUpcomingEventsHtml += eventTpl(event);
+                    } else {
+                        yearPastEventsHtml += eventTpl(event);
+                    }
+                });
 
-            if (today.getFullYear() - year.year < 3) {
-                upcomingAndRecentEventsHtml += yearHtml;
+                yearUpcomingHtml = yearTpl({
+                    year: year.year,
+                    events: yearUpcomingEventsHtml
+                });
+
+                yearPastHtml = yearTpl({
+                    year: year.year,
+                    events: yearPastEventsHtml
+                });
+                // console.log(yearUpcomingEventsHtml);
+                // console.log(yearUpcomingHtml);
+                // console.log(yearPastHtml);
+            } else {
+                var eventsHtml = '';
+                year.events.forEach(function(event){
+                    eventsHtml += eventTpl(event);
+                });
+
+                yearHtml = yearTpl({
+                    year: year.year,
+                    events: eventsHtml
+                });
+            }
+
+            var y = new Date('' + year.year + '');
+            if (today < y) {
+                upcomingEventsHtml += yearHtml;
+            } else if (today.getFullYear() === year.year) {
+                upcomingEventsHtml += (yearUpcomingEventsHtml) ? yearUpcomingHtml : '';
+                pastEventsHtml += (yearPastEventsHtml) ? yearPastHtml : '';
+            } else if (today.getFullYear() - year.year < 2) {
+                // upcomingAndRecentEventsHtml += yearHtml;
+                pastEventsHtml += yearHtml;
             } else {
                 olderEventsHtml += yearHtml;
             }
         });
-        console.log(eventsByYear);
+        // console.log(eventsByYear);
 
         // Seminars
         var seminarCities = [];
@@ -85,6 +121,7 @@ var loadEvents = function() {
             eventData = {
                 content: event.html,
                 title: event.meta.title,
+                subtitle: event.meta.subTitle,
                 // place: event.meta.location,
                 place: false,
                 researchFields: event.meta.researchFields,
@@ -114,14 +151,33 @@ var loadEvents = function() {
         });
 
         $('.js_older_events_list').html(olderEventsHtml);
-        $('.js_upcoming_n_recent_events_list').html(upcomingAndRecentEventsHtml);
+        $('.js_upcoming_events_list').html(upcomingEventsHtml);
+        $('.js_past_events_list').html(pastEventsHtml);
         $('.js_seminars').html(seminarsHtml);
     };
     $.get('/data/events.json').done(showEventsData);
 };
 $(document).ready(function(){
     loadEvents();
-    $('.js_past_events_heading').click(function(e) {
+    $('.js_older_events_heading').click(function(e) {
         $('.js_older_events_list').toggleClass('hide');
     });
+    // Back to top
+    var $btnScrollTop = $('.js_backtotop');
+    $btnScrollTop.click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        $btnScrollTop.addClass('hide');
+        return false;
+    });
+
+    window.onscroll = function(e) {
+        if(document.body.scrollTop > 300) {
+            $btnScrollTop.removeClass('hide');
+        }
+
+        if(document.body.scrollTop < 299) {
+            $btnScrollTop.addClass('hide');
+        }
+    };
+    $btnScrollTop.addClass('hide');
 });
