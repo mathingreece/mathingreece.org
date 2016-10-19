@@ -24,10 +24,10 @@
                 <div class="row">
                     <div class="hidden-xs col-sm-2 col-md-2 col-uni">
                         <ul class="list-unstyled uni-links">
-                            <li><a href="http://noether.math.uoa.gr/" target="_blank" title=""><img class="img-responsive" src="/images/uoa.png" alt="Athens"></a></li>
-                            <li><a href="http://www.math.auth.gr/" target="_blank" title=""><img class="img-responsive" src="/images/auth.png" alt="Thessaloniki"></a></li>
-                            <li><a href="http://www.math.uoc.gr/el/index.php" target="_blank" title=""><img class="img-responsive" src="/images/uoc.png" alt="Crete"></a></li>
-                            <li><a href="http://www.math.upatras.gr/" target="_blank" title=""><img class="img-responsive" src="/images/upatras.png" alt="Patras"></a></li>
+                            <li><a href="http://noether.math.uoa.gr/" target="_blank" title="University of Athens"><img class="img-responsive" src="/images/uoa.png" alt="Athens"></a></li>
+                            <li><a href="http://www.math.auth.gr/" target="_blank" title="Aristotle University of Thessaloniki"><img class="img-responsive" src="/images/auth.png" alt="Thessaloniki"></a></li>
+                            <li><a href="http://www.math.uoc.gr/el/index.php" target="_blank" title="University of Crete"><img class="img-responsive" src="/images/uoc.png" alt="Crete"></a></li>
+                            <li><a href="http://www.math.upatras.gr/" target="_blank" title="University of Patras"><img class="img-responsive" src="/images/upatras.png" alt="Patras"></a></li>
                         </ul>
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8 main-content container-fluid">
@@ -70,10 +70,10 @@
                     </div>
                     <div class="hidden-xs col-sm-2 col-md-2 col-uni">
                         <ul class="list-unstyled uni-links">
-                            <li><a href="http://www.semfe.ntua.gr/el/" target="_blank" title=""><img class="img-responsive" src="/images/ntua.png" alt="SEMFE"></a></li>
-                            <li><a href="http://www.math.uoi.gr/" target="_blank" title=""><img class="img-responsive" src="/images/uoi.png" alt="Ioannina"></a></li>
-                            <li><a href="http://www.math.aegean.gr/in/" target="_blank" title=""><img class="img-responsive" src="/images/aegean.png" alt="Samos"></a></li>
-                            <li><a href="https://www.ucy.ac.cy/mas/el/" target="_blank" title=""><img class="img-responsive" src="/images/cyprus.png" alt="Nicosia"></a></li>
+                            <li><a href="http://www.semfe.ntua.gr/el/" target="_blank" title="National Technical University of Athens"><img class="img-responsive" src="/images/ntua.png" alt="SEMFE"></a></li>
+                            <li><a href="http://www.math.uoi.gr/" target="_blank" title="University of Ioannina"><img class="img-responsive" src="/images/uoi.png" alt="Ioannina"></a></li>
+                            <li><a href="http://www.math.aegean.gr/in/" target="_blank" title="University of Aegean"><img class="img-responsive" src="/images/aegean.png" alt="Samos"></a></li>
+                            <li><a href="https://www.ucy.ac.cy/mas/el/" target="_blank" title="University of Cyprus"><img class="img-responsive" src="/images/cyprus.png" alt="Nicosia"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -121,13 +121,13 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+    <script type="text/javascript">
+        $.ajaxSetup({
+            crossDomain : true, // Globally allow CORS requests with authorization
+            cache       : false // Never cache data files
+        });
+    </script>
     <script type="text/javascript" src="/js/app.js"></script>
-    <!-- <li>
-        <h4><a href="http://fourier.math.uoc.gr/pcma2016/" target="_blank" title="15th Panhellenic Conference of Mathematical Analysis">15th Panhellenic Conference of Mathematical Analysis</a></h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div><span class="event__details">when:</span> 27-29 May 2016</div>
-        <div><span class="event__details">where:</span> University of Crete</div>
-    </li> -->
     <script type="text/template" id="tpl-event-item">
         <li>
             <h4><% if (link) { %><a href="<%- link %>" target="_blank" title="<%- title %>"><% } %><%- title %><% if (link) { %></a><% } %></h4>
