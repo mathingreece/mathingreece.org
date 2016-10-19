@@ -28,9 +28,14 @@ html, body {
     background-image: url('/images/light_toast.png');
 }
 .uni-links li {
-    height: 40px;
-    margin-bottom: 20px;
+    height: 70px;
+    margin-bottom: 5px;
+    display: block;
 }
+// .uni-links img {
+//     width: 100%;
+//     height: 60px;
+// }
 .content-tab-cnt {
     background-color: #efefef;
 }
@@ -67,6 +72,15 @@ html, body {
 
 .scroll-to-top {
     position: fixed; bottom: 10px; width: 30px; height: 30px; background: #EEE; text-align: center; line-height: 30px; border-radius: 3px; border: 1px solid #DDD; z-index: 999; right: 15px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); cursor: pointer;
+}
+
+.no-padding {
+   padding: 0 !important;
+   // margin: 0 !important;
+}
+
+.col-uni {
+    padding: 3px !important;
 }
 
 @media (max-width: 795px) {
