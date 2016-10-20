@@ -36,6 +36,6 @@ TODO:
 
 - [ ] improve styling
 
-- [ ] hosting
+- [x] hosting
 
-- [ ] FIX CONFERENCE DATES
+- [x] FIX CONFERENCE DATES
