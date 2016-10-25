@@ -18,7 +18,7 @@ var loadEvents = function() {
         var date;
         var eventsByYear = [];
         events.conference = _.sortBy(events.conference, function(event) {
-            return - new Date(event.meta.startDate).getUTCTime();
+            return - new Date(event.meta.startDate).getTime();
         });
         events.conference.forEach(function(event) {
             startDate = undefined;
