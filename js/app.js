@@ -18,7 +18,7 @@ var loadEvents = function() {
         var date;
         var eventsByYear = [];
         events.conference = _.sortBy(events.conference, function(event) {
-            return - new Date(event.meta.startDate).getTime();
+            return - new Date(event.meta.startDate).getUTCTime();
         });
         events.conference.forEach(function(event) {
             startDate = undefined;
@@ -29,10 +29,10 @@ var loadEvents = function() {
             endDate = new Date((event.meta.endDate || event.meta.startDate));
             // console.log(event.meta.startDate);
             // console.log(event.meta.endDate);
-            if (startDate.getMonth() - endDate.getMonth()) {
-                date = startDate.getDate() + ' ' + months[startDate.getMonth()] + ' - ' + endDate.getDate() + ' ' + months[endDate.getMonth()] + ' ' + startDate.getFullYear();
+            if (startDate.getUTCMonth() - endDate.getUTCMonth()) {
+                date = startDate.getUTCDate() + ' ' + months[startDate.getUTCMonth()] + ' - ' + endDate.getUTCDate() + ' ' + months[endDate.getUTCMonth()] + ' ' + startDate.getFullYear();
             } else {
-                date = startDate.getDate() + ' - ' + endDate.getDate() + ' ' + months[endDate.getMonth()] + ' ' + startDate.getFullYear();
+                date = startDate.getUTCDate() + ' - ' + endDate.getUTCDate() + ' ' + months[endDate.getUTCMonth()] + ' ' + startDate.getFullYear();
             }
             eventData = {
                 content: event.html,
