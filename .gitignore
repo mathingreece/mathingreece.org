@@ -11,5 +11,7 @@ bower_components/*
 config.codekit
 sftp-config.json
 .idea
+images/oldies
+images/oldies/*
 build
 build/*
