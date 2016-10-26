@@ -32,9 +32,9 @@ TODO:
   - past events
     - older
 
-- [ ] improve uni images (need photoshop)
+- [x] improve uni images (need photoshop)
 
-- [ ] improve styling
+- [x] improve styling
 
 - [x] hosting
 
