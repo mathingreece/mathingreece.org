@@ -169,15 +169,16 @@ $(document).ready(function(){
         $btnScrollTop.addClass('hide');
         return false;
     });
-
-    window.onscroll = function(e) {
-        if(document.body.scrollTop > 300) {
-            $btnScrollTop.removeClass('hide');
-        }
-
-        if(document.body.scrollTop < 299) {
-            $btnScrollTop.addClass('hide');
-        }
-    };
+    var scrollVal = 0;
+    // window.onscroll = function(e) {
+    //     scrollVal = document.body.scrollTop;
+    //     if(scrollVal > 300) { $btnScrollTop.removeClass('hide'); }
+    //     if(scrollVal < 299) { $btnScrollTop.addClass('hide'); }
+    // };
+    $(window).scroll(function(){
+        scrollVal = $('body').scrollTop();
+        if(scrollVal > 300) { $btnScrollTop.removeClass('hide'); }
+        if(scrollVal < 299) { $btnScrollTop.addClass('hide'); }
+    });
     $btnScrollTop.addClass('hide');
 });
