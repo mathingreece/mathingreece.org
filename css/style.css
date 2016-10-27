@@ -82,6 +82,10 @@ html, body { background-color: #242d48; }
 }
 .no-padding { padding: 0 !important; }
 .col-uni { padding: 3px !important; }
+.btn-older-events {
+    font-size: 20px;
+    font-weight: 500;
+}
 @media (max-width: 795px) {
     .header__image { height: 250px; }
 }
