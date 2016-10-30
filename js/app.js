@@ -20,7 +20,8 @@ var loadEvents = function() {
         events.conference = _.sortBy(events.conference, function(event) {
             return - new Date(event.meta.startDate).getTime();
         });
-        events.conference.forEach(function(event) {
+        _.each(events.conference, function(event) {
+        // events.conference.forEach(function(event) {
             startDate = undefined;
             endDate = undefined;
             date =  undefined;
@@ -58,12 +59,14 @@ var loadEvents = function() {
         eventsByYear = _.sortBy(eventsByYear, function(event) {
             return - event.year;
         });
-        eventsByYear.forEach(function(year) {
+        _.each(eventsByYear, function(year) {
+        // eventsByYear.forEach(function(year) {
             var yearUpcomingHtml = '', yearPastHtml = '', yearHtml = '';
             var yearUpcomingEventsHtml = '',  yearPastEventsHtml = '';
             if (year.year == today.getFullYear()) {
                 var d = new Date();
-                year.events.forEach(function(event){
+                _.each(year.events, function(event) {
+                // year.events.forEach(function(event) {
                     d = new Date(event.startDate);
                     if (today < d) {
                         // console.log(event);
@@ -87,7 +90,8 @@ var loadEvents = function() {
                 // console.log(yearPastHtml);
             } else {
                 var eventsHtml = '';
-                year.events.forEach(function(event){
+                _.each(year.events, function(event) {
+                // year.events.forEach(function(event) {
                     eventsHtml += eventTpl(event);
                 });
 
@@ -115,7 +119,8 @@ var loadEvents = function() {
         // Seminars
         var seminarCities = [];
         var existingCity = false;
-        events.seminar.forEach(function(event) {
+        _.each(events.seminar, function(event) {
+        // events.seminar.forEach(function(event) {
             // console.log(event.meta.location);
             existingCity = _.find(seminarCities, {name: event.meta.location}) || false;
             eventData = {
@@ -142,9 +147,11 @@ var loadEvents = function() {
         seminarCities = _.sortBy(seminarCities, function(city){
             return city.name;
         });
-        seminarCities.forEach(function(city) {
+        _.each(seminarCities, function(city) {
+        // seminarCities.forEach(function(city) {
             seminarsHtml += '<div class="city"><h4 class="city-name">' + city.name + '</h4><ul class="city-events">';
-            city.events.forEach(function(event){
+            _.each(city.events, function(event) {
+            // city.events.forEach(function(event) {
                 seminarsHtml += eventTpl(event);
             });
             seminarsHtml += '</ul></div>';
