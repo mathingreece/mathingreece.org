@@ -185,7 +185,8 @@ $(document).ready(function(){
     //     if(scrollVal < 299) { $btnScrollTop.addClass('hide'); }
     // };
     $(window).scroll(function(){
-        scrollVal = $('body').scrollTop();
+        // scrollVal = $('body').scrollTop();
+        scrollVal = $(this).scrollTop() || 0;
         if(scrollVal > 300) { $btnScrollTop.removeClass('hide'); }
         if(scrollVal < 299) { $btnScrollTop.addClass('hide'); }
     });

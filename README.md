@@ -38,4 +38,4 @@ RELEASE:
 - [x] google analytics
 - [x] social tags
 - [ ] make fb/tw/g+ page and link
-- [ ] inform google, yahoo, bing
+- [x] inform google, yahoo, bing
