@@ -8,6 +8,7 @@ html, body { background-color: #242d48; }
     background-color: white;
 }
 .page-header {
+    position: relative;
     margin-top: 15px;
     border: none;
 }
@@ -85,6 +86,13 @@ html, body { background-color: #242d48; }
 .btn-older-events {
     font-size: 20px;
     font-weight: 500;
+}
+.page-version {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 8px;
+    color: #ccc;
 }
 @media (max-width: 795px) {
     .header__image { height: 250px; }
