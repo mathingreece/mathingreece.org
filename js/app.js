@@ -165,8 +165,9 @@ var showEventsData = function(events) {
     $('.js_seminars').html(seminarsHtml);
 };
 
-var onFetchError = function(e) {
+var onFetchError = function(jqXHR, textStatus, errorThrown) {
     $('.js_upcoming_events_heading').css({'color': 'red'});
+    $('.js_upcoming_events_list').html(textStatus + ' ' + errorThrown);
 };
 
 $(document).ready(function(){
