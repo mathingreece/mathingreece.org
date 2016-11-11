@@ -167,6 +167,10 @@ var loadEvents = function() {
     $.get('/data/events.json').done(showEventsData);
 };
 $(document).ready(function(){
+    $.ajaxSetup({
+        crossDomain : true, // Globally allow CORS requests with authorization
+        cache       : false // Never cache data files
+    });
     loadEvents();
     $('.js_older_events_heading').click(function(e) {
         $('.js_older_events_list').toggleClass('hide');
