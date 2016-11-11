@@ -10,7 +10,6 @@ var showEventsData = function(events) {
     var today = new Date();
 
     var olderEventsHtml = '';
-    // var upcomingAndRecentEventsHtml = '';
     var upcomingEventsHtml = '';
     var pastEventsHtml = '';
     var seminarsHtml = '';
@@ -23,15 +22,12 @@ var showEventsData = function(events) {
         return - new Date(event.meta.startDate).getTime();
     });
     _.each(events.conference, function(event) {
-    // events.conference.forEach(function(event) {
         startDate = undefined;
         endDate = undefined;
         date =  undefined;
         if (!event.meta.startDate) { return false; }
         startDate = new Date(event.meta.startDate);
         endDate = new Date((event.meta.endDate || event.meta.startDate));
-        // console.log(event.meta.startDate);
-        // console.log(event.meta.endDate);
         if (startDate.getUTCMonth() - endDate.getUTCMonth()) {
             date = startDate.getUTCDate() + ' ' + months[startDate.getUTCMonth()] + ' - ' + endDate.getUTCDate() + ' ' + months[endDate.getUTCMonth()] + ' ' + startDate.getFullYear();
         } else {
@@ -62,16 +58,13 @@ var showEventsData = function(events) {
         return - event.year;
     });
     _.each(eventsByYear, function(year) {
-    // eventsByYear.forEach(function(year) {
         var yearUpcomingHtml = '', yearPastHtml = '', yearHtml = '';
         var yearUpcomingEventsHtml = '',  yearPastEventsHtml = '';
         if (year.year == today.getFullYear()) {
             var d = new Date();
             _.each(year.events, function(event) {
-            // year.events.forEach(function(event) {
                 d = new Date(event.startDate);
                 if (today < d) {
-                    // console.log(event);
                     yearUpcomingEventsHtml += eventTpl(event);
                 } else {
                     yearPastEventsHtml += eventTpl(event);
@@ -87,13 +80,9 @@ var showEventsData = function(events) {
                 year: year.year,
                 events: yearPastEventsHtml
             });
-            // console.log(yearUpcomingEventsHtml);
-            // console.log(yearUpcomingHtml);
-            // console.log(yearPastHtml);
         } else {
             var eventsHtml = '';
             _.each(year.events, function(event) {
-            // year.events.forEach(function(event) {
                 eventsHtml += eventTpl(event);
             });
 
@@ -110,26 +99,21 @@ var showEventsData = function(events) {
             upcomingEventsHtml += (yearUpcomingEventsHtml) ? yearUpcomingHtml : '';
             pastEventsHtml += (yearPastEventsHtml) ? yearPastHtml : '';
         } else if (today.getFullYear() - year.year < 2) {
-            // upcomingAndRecentEventsHtml += yearHtml;
             pastEventsHtml += yearHtml;
         } else {
             olderEventsHtml += yearHtml;
         }
     });
-    // console.log(eventsByYear);
 
     // Seminars
     var seminarCities = [];
     var existingCity = false;
     _.each(events.seminar, function(event) {
-    // events.seminar.forEach(function(event) {
-        // console.log(event.meta.location);
         existingCity = _.find(seminarCities, {name: event.meta.location}) || false;
         eventData = {
             content: event.html,
             title: event.meta.title,
             subtitle: event.meta.subTitle,
-            // place: event.meta.location,
             place: false,
             researchFields: event.meta.researchFields,
             link: event.meta.link,
@@ -143,17 +127,13 @@ var showEventsData = function(events) {
                 events: [eventData]
             });
         }
-        // seminarsHtml += eventTpl(eventData);
     });
-    // console.log(seminarCities);
     seminarCities = _.sortBy(seminarCities, function(city){
         return city.name;
     });
     _.each(seminarCities, function(city) {
-    // seminarCities.forEach(function(city) {
         seminarsHtml += '<div class="city"><h4 class="city-name">' + city.name + '</h4><ul class="city-events">';
         _.each(city.events, function(event) {
-        // city.events.forEach(function(event) {
             seminarsHtml += eventTpl(event);
         });
         seminarsHtml += '</ul></div>';
