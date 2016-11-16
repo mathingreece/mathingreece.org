@@ -151,7 +151,7 @@ var onFetchError = function(jqXHR, textStatus, errorThrown) {
 };
 
 $(document).ready(function(){
-    $.get('/data/events.json').done(showEventsData).fail(onFetchError);
+    $.get('https://data.mathingreece.org/events.json').done(showEventsData).fail(onFetchError);
     $('.js_older_events_heading').click(function(e) {
         $('.js_older_events_list').toggleClass('hide');
     });
