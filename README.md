@@ -28,10 +28,10 @@ TODO:
 
 RELEASE:
 1 [x] Fix ie
-2 [-] SEO *
-3 [ ] Back to top button in moz FFX
-4 [ ] Cross device/browser check mathingreece.org
-5 [ ] automate converter running (https://www.dropbox.com/developers/reference/webhooks#tutorial)
+2 [X] SEO *
+3 [X] Back to top button in moz FFX
+4 [X] Cross device/browser check mathingreece.org
+5 [X] automate converter running (https://www.dropbox.com/developers/reference/webhooks#tutorial)
 
 * SEO:
 - [x] meta description & keywords
